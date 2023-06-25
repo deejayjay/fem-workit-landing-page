@@ -1,0 +1,100 @@
+/* Andy Bell's Modern CSS Reset tweaked slightly */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* End of CSS Reset */
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
+}
+
+.header {
+  background-color: var(--color-dark-purple);
+  color: var(--color-white);
+  padding: 3.2rem 1.6rem 16rem;
+}
+
+.header__logo-image {
+  width: 9.6rem;
+  height: 2.5rem;
+}
+
+/* 
+  font-family: 'Fraunces', serif;  
+  heading L: Semi Bold  font-size: 8rem  line-height:8rem
+  heading M: Semi Bold  font-size: 5.6rem  line-height:6.4rem
+  heading S: Semi Bold  font-size: 3.2rem  line-height:4rem
+*/
