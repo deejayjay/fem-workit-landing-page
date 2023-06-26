@@ -30,9 +30,9 @@
       </nav>
     </div>
     <!-- Hero -->
-    <section class="header__hero">
-      <h2>Data tailored to your needs.</h2>
-      <a href="#">Learn more</a>
+    <section class="hero">
+      <h2 class="hero__title">Data <span class="underline">tailored</span> to your needs.</h2>
+      <a href="#" class="hero__link">Learn more</a>
     </section>
     <!-- End of Hero -->
   </header>
@@ -40,54 +40,73 @@
   <!-- Main -->
   <main>   
     <!-- Features -->
-    <div>
-      <section>
-        1
-        <h3>Actionable insights</h3>    
-        <p>
-          Optimize your products, improve customer satisfaction and stay ahead of the competition 
-          with our product data analytics.
-        </p>
-      </section>  
-      <section>
-        2
-        <h3>Data-driven decisions</h3>    
-        <p>
-          Make data-driven decisions with our product data analytics. Our AI-generated reports help 
-          you unlock insights hidden in your product data.
-        </p>
-      </section>  
-      <section>
-        3  
-        <h3>Always affordable</h3>
-        <p>
-          Always affordable pricing that scales with your business. Get top-quality product data 
-          analytics services without hidden costs or unexpected fees.
-        </p>
-      </section>      
-    </div>
+    <ul class="features" role="list">
+      <li role="listitem">
+        <section class="feature">
+          <h3 class="feature__title">Actionable insights</h3>    
+          <p class="feature__desc">
+            Optimize your products, improve customer satisfaction and stay ahead of the competition 
+            with our product data analytics.
+          </p>
+        </section> 
+      </li> 
+      <li role="listitem">
+        <section class="feature">
+          <h3 class="feature__title">Data-driven decisions</h3>    
+          <p class="feature__desc">
+            Make data-driven decisions with our product data analytics. Our AI-generated reports help 
+            you unlock insights hidden in your product data.
+          </p>
+        </section>  
+      </li>
+      <li role="listitem">
+        <section class="feature">
+          <h3 class="feature__title">Always affordable</h3>
+          <p class="feature__desc">
+            Always affordable pricing that scales with your business. Get top-quality product data 
+            analytics services without hidden costs or unexpected fees.
+          </p>
+        </section>  
+      </li>    
+    </ul>
     <!-- End of Features -->
     <!-- Be first to test -->
-    <aside>
-      <h4>Be the first to test</h4>
-      <p>
-        Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
-        beta tester for our app and kickstart your company. Apply for access below and I’ll be 
-        in touch to schedule a call.
-      </p>
-      <a href="#">Apply for access</a>
-    </aside>
+    <div class="apply-access__wrapper">
+      <img src="./assets/images/image-founder.webp" alt="A photo of Louis Graham, the founder of Workit." class="apply-access__image">
+      <aside class="apply-access">
+        <h4 class="apply-access__title">Be the first to test</h4>
+        <p class="apply-access__content">
+          Hi, I'm Louis Graham, the founder of the company. Book a demo call with me to become a 
+          beta tester for our app and kickstart your company. Apply for access below and I’ll be 
+          in touch to schedule a call.
+        </p>
+        <a href="#" class="apply-access__link">Apply for access</a>
+      </aside>
+    </div>
     <!-- End of Be first to test -->    
   </main>  
   <!-- Main -->
   <!-- Footer -->
   <footer>
-    <section>
+    <section class="social-media">
       <h5 class="visually-hidden">Social Media Links</h5>
-      <ul>
-        <li>Facebook</li>
-        <li>Twitter</li>
-        <li>Instagram</li>
+      <img src="./assets/images/logo-dark.svg" alt="Workit Logo" class="social-media__logo">
+      <ul class="social-media__icons">
+        <li>
+          <a href="#">
+            <img src="./assets/images/icon-facebook.svg" alt="Facebook icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/images/icon-twitter.svg" alt="Twitter icon">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="./assets/images/icon-instagram.svg" alt="Instagram icon">
+          </a>
+        </li>
       </ul>
     </section>
   </footer>

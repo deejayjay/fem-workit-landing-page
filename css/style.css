@@ -13,9 +13,10 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -28,6 +29,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  min-width: 32rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -76,15 +78,42 @@ html {
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+  counter-reset: feature; /* Set a counter named 'feature', and its initial value is 0. */
 }
 
 .header {
+  /* background: url(../assets/images/hero-bg.svg) no-repeat 0 100% / cover; */
   background-color: var(--color-dark-purple);
   color: var(--color-white);
-  padding: 3.2rem 1.6rem 16rem;
+  padding: 3.2rem 1.6rem calc(16rem - 75px);
+  position: relative;
+  z-index: 1;
+}
+
+.header::before{
+  content: "";
+  width: 100%;
+  height: 150px;
+  background: url(../assets/images/curve.svg) no-repeat 100% 100% / cover;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+}
+
+.header::after {
+  content: "";
+  width: 85%;
+  max-width: 51.4rem;
+  aspect-ratio: 80 / 46;
+  background: url(../assets/images/image-hero.webp) no-repeat 100% 100% / cover;
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+  transform: translate(-50%, 85%);
 }
 
 .header__logo-image {
@@ -92,8 +121,151 @@ body {
   height: 2.5rem;
 }
 
+.header__logo-link,
+.header__nav-link,
+.hero__link,
+.apply-access__link {
+  text-decoration: none;
+}
+
+.header__top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav-link {
+  color: var(--color-white);
+  padding: 0.4rem 0;
+  border-bottom: 3px solid var(--color-green);
+  font-size: 1.6rem;
+}
+
+.hero__title,
+.feature__title,
+.apply-access__title {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin: 6.4rem 0 4rem;
+}
+
+.underline {
+  position: relative;
+}
+
+.underline::after {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-green);
+}
+
+.hero__link,
+.apply-access__link {
+  color: var(--color-dark-purple);
+  background-color: var(--color-green);
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  font-weight: 700;
+}
+
+.features {
+  background: url(../assets/images/features-bg.svg) no-repeat 0 100% / cover;
+  padding: 20.6rem 1.6rem 3.2rem;
+  color: var(--color-dark-purple);
+}
+
+.feature {
+  position: relative;
+  padding-top: 7.2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.feature::before {
+  border: 1px solid var(--color-greyish-purple);
+  font-weight: 600;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  counter-increment: feature; /* Increment the value of feature counter by 1 */
+  content: counter(feature); /* Display the value of feature counter */
+}
+
+.feature__title {
+  font-size: 2.8rem;
+}
+
+.feature__desc {
+}
+
+.apply-access__wrapper {
+  position: relative;
+}
+
+.apply-access__image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -1;
+  width: calc(100% - 6.4rem);
+  transform: translate(-50%, calc(-100% + 6rem));
+}
+
+.apply-access {
+  background-color: var(--color-dark-purple);
+  color: var(--color-white);
+  margin: 32.8rem 1.6rem 7.4rem;
+  padding: 3.2rem;
+  text-align: center;  
+}
+
+.apply-access__title {
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+  line-height: 1.5;
+}
+
+.apply-access__link {
+  display: inline-block;
+  margin-top: 2.4rem;
+}
+
+.social-media {
+  padding: 0 13rem 6.4rem;  
+}
+
+.social-media__logo {
+  margin: 0 auto 5.8rem;
+}
+
+.social-media__icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.8rem;
+}
+
 /* 
-  font-family: 'Fraunces', serif;  
+  
   heading L: Semi Bold  font-size: 8rem  line-height:8rem
   heading M: Semi Bold  font-size: 5.6rem  line-height:6.4rem
   heading S: Semi Bold  font-size: 3.2rem  line-height:4rem
